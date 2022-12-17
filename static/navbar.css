@@ -7,26 +7,26 @@
 }
 
 .navbar-brand {
-  color: white;
+  color: #FF6584;
 }
 
 .navbar-brand:hover {
-  color: white;
+  color: #de012d;
 }
 
 .nav-link {
-  color: white;
+  color: #FF6584;
 }
 
 .nav-link:hover {
-  color: #d247f7;
+  color:  #de012d;
 }
 
 #nav-div {
   width: 90vw;
   height: 6vh;
   border-radius: 10px;
-  background-color: rgb(29, 28, 28);
+  background-color: white;
   color: white;
   margin-bottom: 4rem;
   margin-top: -4rem;
