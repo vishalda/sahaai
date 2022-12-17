@@ -1,7 +1,7 @@
-"""sahaai URL Configuration
+"""PhotoStall URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/3.2/topics/http/urls/
+    https://docs.djangoproject.com/en/3.1/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -13,12 +13,14 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
+from . import views
 from django.urls import path
-from django.urls.conf import include
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('',include('ngo.urls'))
+    path('',views.index,name="index"),
+    path('register-ngo/',views.register_ngo,name="Register NGO"),
+    path('login-ngo/',views.login_ngo,name="Login NGO"),
+    path('logout-ngo/',views.logout_ngo,name="Logout NGO"),
+    path('ngo/<int:nid>/',views.ngo_page,name="NGO page")
 ]
