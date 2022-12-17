@@ -12,6 +12,8 @@ class Organization(AbstractUser):
     location=models.TextField(blank=True,null=True)
     links=models.TextField(blank=True,null=True)
     logo=models.ImageField(upload_to="images")
+    qrCode=models.ImageField(upload_to="images")
+
     objects = UserManager()
 
     USERNAME_FIELD = 'email'
