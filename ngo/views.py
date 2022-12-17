@@ -3,7 +3,7 @@ from django.contrib.auth.models import auth
 from django.contrib import messages
 from django.views.decorators.csrf import csrf_exempt
 from django.db import connection
-#from event.models import Event
+from event.models import Event
 from .models import *
 from django.http import JsonResponse
 import os
@@ -75,8 +75,8 @@ def login_ngo(request):
     if request.method=="POST":
         username=request.POST['username']
         password=request.POST['password']
-        #user=Organization.objects.raw('''SELECT * FROM ngo_organization WHERE username='{}';'''.format(username))
-        user=Organization.objects.get(username=username)
+        user=Organization.objects.raw('''SELECT * FROM ngo_organization WHERE username='{}';'''.format(username))
+        #user=Organization.objects.get(username=username)
         print(user)
         if(user[0].check_password(password)):
             auth.login(request,user[0])
@@ -93,8 +93,9 @@ def logout_ngo(request):
     auth.logout(request)
     return redirect('/')
 
-# def ngo_page(request,nid):
-#     org_data=Organization.objects.raw('''SELECT * FROM ngo_organization WHERE id='{}';'''.format(nid))
-#     eve_data=Event.objects.raw('''SELECT * FROM event_event WHERE ngo_id_id='{}';'''.format(nid))
-#     data={'org_data':org_data[0],'eve_data':eve_data}
-#     return render(request,"ngo.html",data)
+def ngo_page(request,nid):
+    org_data=Organization.objects.raw('''SELECT * FROM ngo_organization WHERE id='{}';'''.format(nid))
+    eve_data=Event.objects.raw('''SELECT * FROM event_event WHERE ngo_id_id='{}';'''.format(nid))
+    data={'org_data':org_data[0],'eve_data':eve_data}
+    print(data)
+    return render(request,"ngo.html",data)

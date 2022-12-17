@@ -1,0 +1,33 @@
+#navbarSupportedContent {
+  padding-right: 5rem;
+}
+
+.nav-item {
+  margin: 0 20px;
+}
+
+.navbar-brand {
+  color: white;
+}
+
+.navbar-brand:hover {
+  color: white;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  color: #d247f7;
+}
+
+#nav-div {
+  width: 90vw;
+  height: 6vh;
+  border-radius: 10px;
+  background-color: rgb(29, 28, 28);
+  color: white;
+  margin-bottom: 4rem;
+  margin-top: -4rem;
+}

@@ -1,0 +1,18 @@
+body {
+  background-color: rgb(29, 28, 28) !important;
+}
+
+#ngo-detail {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#ngo-logo {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}

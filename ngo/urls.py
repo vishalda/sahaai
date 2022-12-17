@@ -22,5 +22,5 @@ urlpatterns = [
     path('register-ngo/',views.register_ngo,name="Register NGO"),
     path('login-ngo/',views.login_ngo,name="Login NGO"),
     path('logout-ngo/',views.logout_ngo,name="Logout NGO"),
-#    path('ngo/<int:nid>/',views.ngo_page,name="NGO page")
+    path('ngo/<int:nid>/',views.ngo_page,name="NGO page")
 ]
