@@ -1,0 +1,83 @@
+body {
+    background-color: rgb(29, 28, 28) !important;
+  }
+  
+  .landing-page-header {
+    height: 50rem;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .landing-page-box {
+    background-color: rgb(29, 28, 28) !important;
+    border-radius: 1rem;
+    height: 65%;
+    width: 70%;
+  }
+  
+  .create-volunteer-modal {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8rem;
+  }
+  
+  .landing-page-content {
+    text-align: left;
+  }
+  
+  .svg-modal {
+    width: 60%;
+    height: 100%;
+    float: right;
+    position: absolute;
+    top: 7rem;
+    right: -10rem;
+  }
+  
+  .card-div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(29, 28, 28) !important;
+  }
+  
+  .ngo-card-link {
+    color: white;
+    text-decoration: none;
+    padding: 0;
+    width: 80%;
+    margin-bottom: 2rem;
+    background-color: rgb(29, 28, 28) !important;
+  }
+  
+  .ngo-card-link :hover {
+    color: white;
+    box-shadow: 0;
+    background-color: rgb(29, 28, 28);
+  }
+  
+  .ngo-card {
+    width: 100%;
+    box-shadow: 0 8px 32px 0 black;
+    transition: 0.4s;
+    background-color: rgb(29, 28, 28) !important;
+  }
+  
+  .button {
+    color: #d247f7;
+    border-color: #d247f7;
+    border-radius: 5px;
+    border-width: 1px;
+    padding: 10px;
+  }
+  
