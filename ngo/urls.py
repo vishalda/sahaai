@@ -23,5 +23,7 @@ urlpatterns = [
     path('login-ngo/',views.login_ngo,name="Login NGO"),
     path('logout-ngo/',views.logout_ngo,name="Logout NGO"),
     path('ngo/<int:nid>/',views.ngo_page,name="NGO page"),
-    path('donation/<int:nid>/',views.get_qrCode,name="QR Code")
+    path('donation/<int:nid>/',views.get_qrCode,name="QR Code"),
+    path('donate-list/',views.donateList,name="Donate List")
+
 ]
