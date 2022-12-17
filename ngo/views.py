@@ -33,6 +33,7 @@ def register_ngo(request):
         description=request.POST['description']
         links=request.POST['links']
         logo=request.FILES['logo']
+        qrCode=request.FILES['qrcode']
         if password==confirm_password:
             #org=Organization.objects.raw('''SELECT * FROM ngo_organization WHERE username='{}';'''.format(username))
             #if(len(org)>0):
@@ -49,7 +50,7 @@ def register_ngo(request):
                 #return redirect('/register-ngo/')
             else:
                 #user=Organization.objects.raw('insert into ngo_organization (username,password,email,name,location,phone,description,links,logo) values ({},{},{},{},{},{},{},{},{})'.format(username,password,email,name,location,phone,description,links,logo))
-                user=Organization.objects.create_user(username=username,password=password,email=email,name=name,location=location,phone=phone,description=description,links=links,logo=logo)
+                user=Organization.objects.create_user(username=username,password=password,email=email,name=name,location=location,phone=phone,description=description,links=links,logo=logo,qrCode=qrCode)
                 user.save()
                 messages.info(request,'Success')
                 # query='''SELECT * FROM ngo_organization;'''
@@ -99,3 +100,10 @@ def ngo_page(request,nid):
     data={'org_data':org_data[0],'eve_data':eve_data}
     print(data)
     return render(request,"ngo.html",data)
+
+def get_qrCode(request,nid):
+    #qr_data=Organization.objects.raw('''SELECT * FROM ngo_organization WHERE id='{}';'''.format(nid))
+    qr_data=Organization.objects.get(pk=nid)
+    data={'data':qr_data}
+    print(qr_data)
+    return render(request,"donation.html",data)
