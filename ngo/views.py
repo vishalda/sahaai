@@ -107,3 +107,9 @@ def get_qrCode(request,nid):
     data={'data':qr_data}
     print(qr_data)
     return render(request,"donation.html",data)
+
+def donateList(request):
+    ngos=Organization.objects.all()
+    #ngos = Organization.objects.raw('select * from ngo_organization')
+    data={'ngos':ngos}
+    return render(request, 'donate_list.html',data)
