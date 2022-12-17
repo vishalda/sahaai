@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
       body {
-        background-color: rgb(87, 155, 73) !important;
+        background-color: #c6ddff !important;
       }
       .nav-div {
         width: 100%;
@@ -30,7 +30,7 @@
         justify-content: center;
         align-items: center;
         margin-top: 3rem;
-        background-color: rgb(89, 206, 177);
+        background-color: white;
       }
       #navbarSupportedContent {
         padding-right: 5rem;
@@ -41,27 +41,27 @@
       }
 
       .navbar-brand {
-        color: white;
+        color: #ff6584;
         padding-right: 20px;
       }
 
       .navbar-brand:hover {
-        color: white;
+        color: #de012d;
       }
 
       .nav-link {
-        color: white !important;
+        color: #ff6584 !important;
       }
 
       .nav-link:hover {
-        color: #d247f7 !important;
+        color: #de012d !important;
       }
 
       #nav-div {
         width: 90vw;
         height: 5vh;
         border-radius: 10px;
-        background-color: rgb(139, 133, 133);
+        background-color: white;
         color: white;
         box-shadow: -1px 3px 23px -12px black;
         -webkit-box-shadow: -1px 3px 23px -12px black;
@@ -74,8 +74,8 @@
         justify-content: center;
         align-items: center;
         margin-top: 5rem;
-        background-color: rgb(192, 204, 182);
-        color: white;
+        background-color: #c6ddff;
+        color: #ff6584;
       }
 
       #ngo-logo {
@@ -88,7 +88,7 @@
       #ngo-detail p {
         width: 50%;
         text-align: center;
-        background-color: rgb(74, 162, 97);
+        background-color: #aabfde
       }
 
       .event-detail {
@@ -97,7 +97,7 @@
         justify-content: center;
         align-items: center;
         margin-bottom: 5rem;
-        background-color: rgb(139, 189, 147) !important;
+        background-color: #aabfde !important;
         color: white;
       }
 
@@ -106,7 +106,7 @@
         color: white;
         text-decoration: none;
         margin-top: 3rem;
-        background-color: rgb(29, 28, 28);
+        background-color: white;
       }
 
       .event-list :hover {
@@ -114,15 +114,17 @@
       }
 
       .card {
-        color: white;
+        color: black;
         box-shadow: 0 8px 32px 0 black;
         width: 100%;
-        background-color: rgb(29, 28, 28) !important;
+        background-color: white !important;
       }
 
       .event-create-button {
         position: absolute;
         left: 3rem;
+        background-color: white;
+        color: black;
       }
       .top-right-div {
         position: absolute;
@@ -131,7 +133,7 @@
         width: 10rem;
         height: 10rem;
         border-bottom-left-radius: 100%;
-        background-color: #1b682d;
+        background-color: white ;
       }
       .top-left-div {
         position: absolute;
@@ -140,10 +142,10 @@
         width: 10rem;
         height: 10rem;
         border-bottom-right-radius: 100%;
-        background-color: #1b682d;
+        background-color: white ;
       }
     </style>
-    <title>Document</title>
+    <title>NGO-Event</title>
   </head>
   <body>
     <div class="top-right-div"></div>
@@ -157,14 +159,13 @@
       <p>{{org_data.description}}</p>
     </div>
     <br />
-    <hr />
     <br /><br />
 
     {% if request.user.id == org_data.pk %}
     <div class="create-event-modal">
       <button
         type="button"
-        class="btn btn-outline-success event-create-button"
+        class="btn event-create-button"
         data-bs-toggle="modal"
         data-bs-target="#exampleModal"
       >
